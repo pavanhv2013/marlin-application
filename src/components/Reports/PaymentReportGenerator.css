@@ -1,0 +1,230 @@
+/* PaymentReportGenerator.css */
+
+/* General Styles */
+.payment-report-generator {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-report-input-section {
+    margin-bottom: 20px;
+}
+
+/* Header Styles */
+.payment-report-generator h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Input Label Styles */
+.payment-report-input-section label {
+    font-weight: 600;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Dropdown and Calendar Styles */
+.p-dropdown,
+.p-calendar {
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid #007ad9;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Calendar Specific Styles */
+.p-calendar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.p-calendar .p-datepicker {
+    border: 1px solid #007ad9;
+    border-radius: 5px;
+}
+
+.p-calendar .p-datepicker-header {
+    background-color: #007ad9;
+    color: #ffffff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* Dialog Styles */
+.p-dialog-header {
+    background-color: #007ad9;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* Table Styles */
+.p-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.p-table th,
+.p-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.p-table th {
+    background-color: #007ad9;
+    color: white;
+    font-weight: bold;
+}
+
+.p-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+.p-button:hover {
+    background-color: #0056b3;
+}
+
+/* Export Button Styles */
+.payment-report-export-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Summary Section Styles */
+.payment-report-summary-section {
+    margin-bottom: 20px;
+}
+
+.payment-report-summary-section p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 600px) {
+    .payment-report-generator {
+        padding: 15px;
+    }
+
+    .p-dialog {
+        width: 90vw;
+    }
+
+    .payment-report-export-buttons {
+        flex-direction: column; /* Stack buttons on smaller screens */
+    }
+
+    .p-button {
+        margin-bottom: 10px; /* Space between stacked buttons */
+    }
+}
+/* Custom Styles for the Generate Reporter Button */
+.generate-reporter-btn {
+    background-color: #007bff; /* Primary blue background */
+    color: white; /* White text color */
+    font-size: 16px; /* Font size */
+    padding: 12px 24px; /* Padding for spacing */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for clickable button */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    
+    margin: 10px; /* Add margin for spacing */
+}
+
+/* Add a custom hover effect */
+.generate-reporter-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Active effect on click */
+.generate-reporter-btn:active {
+    background-color: #004085; /* Even darker blue on click */
+    transform: translateY(0); /* Reset lift effect */
+}
+
+/* Disabled state */
+.generate-reporter-btn:disabled {
+    background-color: #ccc; /* Light gray for disabled state */
+    color: #666; /* Dark gray text */
+    cursor: not-allowed; /* Not-allowed cursor */
+    box-shadow: none; /* No shadow for disabled state */
+}
+/* Container for export buttons */
+.export-buttons-container {
+    display: flex; /* Align buttons in a row */
+    justify-content: center; /* Center the buttons */
+    gap: 20px; /* Space between buttons */
+    margin: 20px 0; /* Margin for spacing above and below */
+}
+
+/* Styles for the Export to PDF button */
+.export-pdf-btn {
+    background-color: #007bff; /* Primary blue background */
+    color: white; /* White text color */
+    font-size: 16px; /* Font size */
+    padding: 12px 24px; /* Padding for spacing */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for clickable button */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Styles for the Export to Excel button */
+.export-excel-btn {
+    background-color: #28a745; /* Success green background */
+    color: white; /* White text color */
+    font-size: 16px; /* Font size */
+    padding: 12px 24px; /* Padding for spacing */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for clickable button */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Hover effects for both buttons */
+.export-pdf-btn:hover,
+.export-excel-btn:hover {
+    opacity: 0.9; /* Slightly transparent on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Active effect on click for both buttons */
+.export-pdf-btn:active,
+.export-excel-btn:active {
+    transform: translateY(0); /* Reset lift effect */
+}
+
+/* Disabled state */
+.export-pdf-btn:disabled,
+.export-excel-btn:disabled {
+    background-color: #ccc; /* Light gray for disabled state */
+    color: #666; /* Dark gray text */
+    cursor: not-allowed; /* Not-allowed cursor */
+    box-shadow: none; /* No shadow for disabled state */
+}
+
+
+
